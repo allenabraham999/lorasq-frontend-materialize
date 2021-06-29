@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import 'materialize-css/dist/css/materialize.min.css'
 import {Switch, HashRouter as Router, Route} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
+import Landing from './components/Landing/Landing';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <NavBar/>
         <Switch>
           <Route exact path="/">
-            <h1>Landing Page</h1>
+          <Landing />
           </Route>
           <Route exact path="/dashboard">
             <h1>Dashboard Page</h1>
