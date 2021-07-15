@@ -1,35 +1,27 @@
-import { Fragment } from 'react'
-import 'materialize-css/dist/css/materialize.min.css'
-import {Switch, HashRouter as Router, Route} from 'react-router-dom'
-import NavBar from './components/NavBar/NavBar';
-import Landing from './components/Landing/Landing';
-
+import React from 'react';
+import './App.css';
+import Home from './components/pages/HomePage/Home';
+import Map from './components/pages/Map/Map';
+import Profile from './components/pages/Profile/Profile';
+import SignUp from './components/pages/SignUp/SignUp';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/pages/Footer.js/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-
-    <Fragment>
-      <Router>
-        <NavBar/>
-        <Switch>
-          <Route exact path="/">
-          <Landing />
-          </Route>
-          <Route exact path="/dashboard">
-            <h1>Dashboard Page</h1>
-          </Route>
-          <Route exact path="/profile">
-            <h1>Profile page</h1>
-          </Route>
-          <Route exact path="/map">
-            <h1>Map Page</h1>
-          </Route>
-          <Route>
-            <h1>404 not Found</h1>
-          </Route>
-        </Switch>
-      </Router>
-    </Fragment>
+    <Router>
+      <Navbar />
+      <ScrollToTop />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/services' component={Map} />
+        <Route path='/products' component={Profile} />
+        <Route path='/sign-up' component={SignUp} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
