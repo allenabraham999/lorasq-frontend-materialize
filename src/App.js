@@ -12,19 +12,21 @@ import AdminLayout from 'admin/layouts/Admin.js'
 function App() {
   return (
     <Router>
-      <Navbar />
-      <ScrollToTop />
       <Switch>
-        <Route path='/' exact component={Home} />
         <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-        <Route path='/services' component={Map} />
-        <Route path='/products' component={Profile} />
-        <Route path='/sign-up' component={SignUp} />
-        <Route path='*' component={Home} />
+        <div>
+          <Navbar />
+          <ScrollToTop />
+          <Route path='/' exact component={Home} />
+          <Route path='/map' component={Map} />
+          <Route path='/profile' component={Profile} />
+          <Route path='/signup' component={SignUp} />
+          <Route path='*' component={Home} />
+          <Footer />
+        </div>
       </Switch>
-      <Footer />
+      
     </Router>
   );
 }
-
 export default App;
