@@ -41,7 +41,7 @@ function Dashboard() {
     <>
       <div className="content">
         <Row>
-          <Col lg="3" md="6" sm="6">
+          <Col lg="4" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
                 <Row>
@@ -52,7 +52,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Capacity</p>
+                      <p className="card-category">Total Number of Rescuees</p>
                       <CardTitle tag="p">150GB</CardTitle>
                       <p />
                     </div>
@@ -67,7 +67,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
-          <Col lg="3" md="6" sm="6">
+          <Col lg="4" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
                 <Row>
@@ -78,8 +78,8 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Revenue</p>
-                      <CardTitle tag="p">$ 1,345</CardTitle>
+                      <p className="card-category">Rescued count</p>
+                      <CardTitle tag="p"> 1,345</CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -93,7 +93,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
-          <Col lg="3" md="6" sm="6">
+          <Col lg="4" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
                 <Row>
@@ -104,7 +104,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Errors</p>
+                      <p className="card-category">No. of Rescuers on Field</p>
                       <CardTitle tag="p">23</CardTitle>
                       <p />
                     </div>
@@ -119,7 +119,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
-          <Col lg="3" md="6" sm="6">
+          {/* <Col lg="3" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
                 <Row>
@@ -144,9 +144,9 @@ function Dashboard() {
                 </div>
               </CardFooter>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
-        <Row>
+        {/* <Row>
           <Col md="12">
             <Card>
               <CardHeader>
@@ -169,7 +169,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
-        </Row>
+        </Row> */}
         <Row>
           <Col md="4">
             <Card>

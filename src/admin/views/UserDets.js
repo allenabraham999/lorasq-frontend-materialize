@@ -33,12 +33,12 @@ import {
   Col,
 } from "reactstrap";
 
-function User() {
+function UserDets() {
   return (
     <>
       <div className="content">
         <Row>
-          <Col md="4">
+          <Col md="12">
             <Card className="card-user">
               <div className="image">
                 <img alt="..." src={require("assets/img/damir-bosnjak.jpg").default}/>
@@ -192,7 +192,7 @@ function User() {
               </CardBody>
             </Card>
           </Col>
-          <Col md="8">
+          {/* <Col md="8">
             <Card className="card-user">
               <CardHeader>
                 <CardTitle tag="h5">Edit Profile</CardTitle>
@@ -252,7 +252,7 @@ function User() {
                       </FormGroup>
                     </Col>
                   </Row>
-                  {/* <Row>
+                  <Row>
                     <Col md="12">
                       <FormGroup>
                         <label>Address</label>
@@ -302,7 +302,7 @@ function User() {
                         />
                       </FormGroup>
                     </Col>
-                  </Row> */}
+                  </Row>
                   <Row>
                     <div className="update ml-auto mr-auto">
                       <Button
@@ -317,11 +317,11 @@ function User() {
                 </Form>
               </CardBody>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </div>
     </>
   );
 }
 
-export default User;
+export default UserDets;

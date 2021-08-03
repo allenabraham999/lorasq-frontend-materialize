@@ -25,12 +25,18 @@ import PerfectScrollbar from "perfect-scrollbar";
 import logo from "logo.svg";
 
 var ps;
+const checkActive = (match, location) => {
+  //some additional logic to verify you are in the home URI
+  if(!match || !location) return false;
+  const {pathname} = location;
+  return pathname === match.url;
+}
 
 function Sidebar(props) {
   const sidebar = React.useRef();
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
-    return props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
+    return routeName === props.location.pathname.slice(6) ? "active" : "";
   };
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -64,7 +70,7 @@ function Sidebar(props) {
           href="https://www.creative-tim.com"
           className="simple-text logo-normal"
         >
-          Creative Tim
+          LoRaSQ | Admin
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>
@@ -80,7 +86,7 @@ function Sidebar(props) {
                 <NavLink
                   to={prop.layout + prop.path}
                   className="nav-link"
-                  activeClassName="active"
+                  activeClassName="active" isActive={checkActive}
                 >
                   <i className={prop.icon} />
                   <p>{prop.name}</p>
@@ -88,6 +94,15 @@ function Sidebar(props) {
               </li>
             );
           })}
+          <li className="active active-pro">
+            <NavLink
+              to="/"
+              className="active nav-link"
+            >
+              <i className="nc-icon nc-minimal-left" />
+              <p>"Back to mainscreen</p>
+            </NavLink>
+          </li>
         </Nav>
       </div>
     </div>
