@@ -21,7 +21,7 @@ function HeroSection({
       <div
         className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}
       >
-        <div className='container'>
+        <div className='container1'>
           <div
             className='row home__hero-row'
             style={{

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Button.css';
 
-const STYLES = ['btn--primary', 'btn--outline'];
+const STYLES = ['btn1--primary', 'btn1--outline'];
 
-const SIZES = ['btn--medium', 'btn--large', 'btn--mobile', 'btn--wide'];
+const SIZES = ['btn1--medium', 'btn1--large', 'btn1--mobile', 'btn1--wide'];
 
 const COLOR = ['primary', 'blue', 'red', 'green'];
 
@@ -25,7 +25,7 @@ export const Button = ({
 
   return (
     <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
+      className={`btn1 ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
       onClick={onClick}
       type={type}
     >

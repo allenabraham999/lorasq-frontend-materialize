@@ -33,9 +33,9 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className='navbar' >
-          <div className='navbar-container container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+        <nav className='navbar1' >
+          <div className='navbar-container container1'>
+            <Link to='/' className='navbar-logo1' onClick={closeMobileMenu}>
               <MdFingerprint className='navbar-icon' />
               LoRasQ
             </Link>
@@ -43,12 +43,12 @@ function Navbar() {
               {click ? <FaTimes /> : <FaBars />}
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-              <li className='nav-item'>
+              <li className='nav-item1'>
                 <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                   Home
                 </Link>
               </li>
-              <li className='nav-item'>
+              <li className='nav-item1'>
                 <Link
                   to='/map'
                   className='nav-links'
@@ -57,7 +57,7 @@ function Navbar() {
                   {/* Services */}Map
                 </Link>
               </li>
-              <li className='nav-item'>
+              <li className='nav-item1'>
                 <Link
                   to='/profile'
                   className='nav-links'

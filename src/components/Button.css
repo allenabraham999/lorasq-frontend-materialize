@@ -2,7 +2,7 @@
   --primary: #fff;
 }
 
-.btn {
+.btn1 {
   padding: 8px 20px;
   border-radius: 4px;
   outline: none;
@@ -11,13 +11,13 @@
   white-space: nowrap;
 }
 
-.btn--primary {
+.btn1--primary {
   background-color: var(--primary);
   color: #242424;
   border: 1px solid var(--primary);
 }
 
-.btn--outline {
+.btn1--outline {
   background-color: transparent;
   color: #fff;
   padding: 8px 20px;
@@ -25,17 +25,23 @@
   transition: all 0.3s ease-out;
 }
 
-.btn--medium {
+.btn1--medium {
   padding: 8px 20px;
   font-size: 18px;
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid white;
+  transition: all 0.3s ease-out;
+  margin-top: 18px;
 }
 
-.btn--large {
+.btn1--large {
   padding: 12px 26px;
   font-size: 20px;
 }
 
-.btn--mobile {
+.btn1--mobile {
   text-align: center;
   border-radius: 4px;
   width: 80%;
@@ -48,26 +54,26 @@
   transition: all 0.3s ease-out;
 }
 
-.btn--wide {
+.btn1--wide {
   padding: 12px 64px;
   font-size: 20px;
 }
 
-.btn--large:hover,
-.btn--medium:hover,
-.btn--mobile:hover {
+.btn1--large:hover,
+.btn1--medium:hover,
+.btn1--mobile:hover {
   transition: all 0.3s ease-out;
   background: #fff;
   color: #242424;
 }
 
-.btn--wide:hover {
+.btn1--wide:hover {
   color: #fff;
   background-color: #f00946;
   transition: all 0.2s ease-out;
 }
 
-.btn-link {
+.btn1-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +87,8 @@
   background-color: #276afb;
   color: #fff;
   border: none;
+  padding: 10px 66px;
+  font-size: 20px;
 }
 
 .red {
