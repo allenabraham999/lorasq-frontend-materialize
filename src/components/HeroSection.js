@@ -21,7 +21,7 @@ function HeroSection({
       <div
         className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}
       >
-        <div className='container1'>
+        <div className='container'>
           <div
             className='row home__hero-row'
             style={{
@@ -44,11 +44,11 @@ function HeroSection({
                 >
                   {description}
                 </p>
-                <a href='https://en.wikipedia.org/wiki/2018_Kerala_floods'>
+                  <Link to={btnlink} >
                   <Button buttonSize='btn--wide' buttonColor='blue'>
                     {buttonLabel}
                   </Button>
-                </a>
+                  </Link>
               </div>
             </div>
             <div className='col'>
