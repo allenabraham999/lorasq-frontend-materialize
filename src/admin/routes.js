@@ -23,21 +23,28 @@ import Typography from "admin/views/Typography.js";
 import Tables from "admin/views/Tables.js";
 import Maps from "admin/views/Map.js";
 import UserPage from "admin/views/User.js";
-import UpgradeToPro from "admin/views/Upgrade.js";
-
+// import UpgradeToPro from "admin/views/Upgrade.js";
+import UserDets from "admin/views/UserDets.js";
 var routes = [
   {
     path: "/",
-    name: "Profile",
-    icon: "nc-icon nc-bank",
-    component: UserPage,
-    layout: "/admin",
-  },
-  {
-    path: "/dashboard",
     name: "Dashboard",
     icon: "nc-icon nc-bank",
     component: Dashboard,
+    layout: "/admin",
+  },
+  {
+    path: "/profile",
+    name: "User Profile",
+    icon: "nc-icon nc-single-02",
+    component: UserDets,
+    layout: "/admin",
+  },
+  {
+    path: "/profile/edit",
+    name: "Edit Profile",
+    icon: "nc-icon nc-circle-10",
+    component: UserPage,
     layout: "/admin",
   },
   {
@@ -62,13 +69,6 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/profile",
-    name: "User Profile",
-    icon: "nc-icon nc-single-02",
-    component: UserPage,
-    layout: "/admin",
-  },
-  {
     path: "/tables",
     name: "Table List",
     icon: "nc-icon nc-tile-56",
@@ -82,13 +82,13 @@ var routes = [
     component: Typography,
     layout: "/admin",
   },
-  {
-    pro: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "nc-icon nc-spaceship",
-    component: UpgradeToPro,
-    layout: "/admin",
-  },
+  // {
+  //   pro: true,
+  //   path: "/upgrade",
+  //   name: "Upgrade to PRO",
+  //   icon: "nc-icon nc-spaceship",
+  //   component: UpgradeToPro,
+  //   layout: "/admin",
+  // },
 ];
 export default routes;

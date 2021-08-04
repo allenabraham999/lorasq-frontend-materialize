@@ -19,12 +19,12 @@
 import React from "react";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation, Redirect } from "react-router-dom";
 
 import DemoNavbar from "../components/Navbars/DemoNavbar.js";
 import Footer from "../components/Footer/Footer.js";
 import Sidebar from "../components/Sidebar/Sidebar.js";
-import FixedPlugin from "../components/FixedPlugin/FixedPlugin.js";
+// import FixedPlugin from "../components/FixedPlugin/FixedPlugin.js";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/paper-dashboard.scss?v=1.3.0";
@@ -36,8 +36,6 @@ import routes from "../routes.js";
 var ps;
 
 function Dashboard(props) {
-  const [backgroundColor, setBackgroundColor] = React.useState("black");
-  const [activeColor, setActiveColor] = React.useState("warning");
   const mainPanel = React.useRef();
   const location = useLocation();
   React.useEffect(() => {
@@ -56,19 +54,13 @@ function Dashboard(props) {
     mainPanel.current.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
   }, [location]);
-  const handleActiveClick = (color) => {
-    setActiveColor(color);
-  };
-  const handleBgClick = (color) => {
-    setBackgroundColor(color);
-  };
   return (
     <div className="wrapper">
       <Sidebar
         {...props}
         routes={routes}
-        bgColor={backgroundColor}
-        activeColor={activeColor}
+        bgColor="black"
+        activeColor="warning"
       />
       <div className="main-panel" ref={mainPanel}>
         <DemoNavbar {...props} />
@@ -82,15 +74,16 @@ function Dashboard(props) {
               />
             );
           })}
+          <Redirect to="/admin/profile" />
         </Switch>
         <Footer fluid />
       </div>
-      <FixedPlugin
+      {/* <FixedPlugin
         bgColor={backgroundColor}
         activeColor={activeColor}
         handleActiveClick={handleActiveClick}
         handleBgClick={handleBgClick}
-      />
+      /> */}
     </div>
   );
 }
