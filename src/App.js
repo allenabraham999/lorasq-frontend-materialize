@@ -3,7 +3,7 @@ import './App.css';
 import Home from './components/pages/HomePage/Home';
 import Map from './components/pages/Map/Map';
 import Profile from './components/pages/Profile/Profile';
-import SignUp from './components/pages/SignUp/SignUp';
+// import SignUp from './components/pages/SignUp/SignUp';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/pages/Footer/Footer';
@@ -20,7 +20,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/map' component={Map} />
           <Route path='/profile' component={Profile} />
-          <Route path='/signup' component={SignUp} />
+          {/* <Route path='/signup' component={SignUp} /> */}
        
           <Footer />
         </div>
