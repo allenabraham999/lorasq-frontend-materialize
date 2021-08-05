@@ -93,9 +93,10 @@
 }
 
 /* Social Icons */
-.social-icon-link {
+.social-icon-link  {
   color: #fff;
   font-size: 24px;
+
 }
 
 .social-media {
@@ -128,14 +129,32 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .website-rights {
   color: #fff;
   margin-bottom: 16px;
+  
 }
 
+#footer1 {
+  box-sizing: border-box;
+  margin: 0;
+  padding-bottom: 17px;
+  font-family: 'PT Sans', sans-serif;
+  font-size:23px;
+  font-weight:900;
+  
+}
+
+#footer2{
+  box-sizing: border-box;
+  margin: 0;
+  padding-bottom: 5px;
+  font-family: 'PT Sans', sans-serif;
+  font-size:17px;
+}
 @media screen and (max-width: 820px) {
   .footer-links {
     padding-top: 2rem;
@@ -145,7 +164,7 @@
     width: 100%;
   }
 
-  .btn {
+  .btn1 {
     width: 100%;
   }
 

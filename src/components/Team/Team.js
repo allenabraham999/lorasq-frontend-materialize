@@ -1,17 +1,17 @@
 import React from 'react';
-import './Pricing.css';
+import './Team.css';
 import { IconContext } from 'react-icons/lib';
 import { Link } from 'react-router-dom';
 import image1 from './team_images/man1f.png'
 import image2 from './team_images/man2f.png'
 
 
-function Pricing() {
+function Team() {
   return (
     <IconContext.Provider value={{ color: '#fff', size: 64 }}>
       <div className='pricing__section'>
         <div className='pricing__wrapper'>
-          <h1 className='pricing__heading' >Team Members</h1>
+          <h2 className='pricing__heading' ><b>Team Members</b></h2>
           <div className='pricing__container'>
             <Link to='/sign-up' className='pricing__container-card'>
               <div className='pricing__container-cardInfo'>
@@ -75,4 +75,4 @@ function Pricing() {
     </IconContext.Provider>
   );
 }
-export default Pricing;
+export default Team;

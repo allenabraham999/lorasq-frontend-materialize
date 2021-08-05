@@ -44,11 +44,11 @@ function HeroSection({
                 >
                   {description}
                 </p>
-                <a href='https://en.wikipedia.org/wiki/2018_Kerala_floods'>
+                  <Link to={btnlink} >
                   <Button buttonSize='btn--wide' buttonColor='blue'>
                     {buttonLabel}
                   </Button>
-                </a>
+                  </Link>
               </div>
             </div>
             <div className='col'>

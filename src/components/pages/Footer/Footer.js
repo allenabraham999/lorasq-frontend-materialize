@@ -36,34 +36,34 @@ function Footer() {
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Our Team</Link>
-            <Link to='/'>About LoRaWAN</Link>
+            <h2 id="footer1">About Us</h2>
+            <Link to='/sign-up' id="footer2">How it works</Link>
+            <Link to='/' id="footer2">Our Team</Link>
+            <Link to='/' id="footer2">About LoRaWAN</Link>
            
           </div>
           <div className='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Email</Link>
-            <Link to='/'>Phone</Link> 
-            <Link to='/'>Drop a msg</Link>
+            <h2 id="footer1">Contact Us</h2>
+            <Link to='/' id="footer2">Email</Link>
+            <Link to='/' id="footer2">Phone</Link> 
+            <Link to='/' id="footer2">Drop a msg</Link>
 
          
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>Content</h2>
-            <Link to='/'>Demo Video</Link>
-            <Link to='/'>Documentation</Link>
-            <Link to='/'>Source Code</Link>
+            <h2 id="footer1">Content</h2>
+            <Link to='/' id="footer2">Demo Video</Link>
+            <Link to='/' id="footer2">Documentation</Link>
+            <Link to='/' id="footer2">Source Code</Link>
             
           </div>
           <div className='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
+            <h2 id="footer1">Social Media</h2>
+            <Link to='/' id="footer2">Instagram</Link>
+            <Link to='/' id="footer2">Facebook</Link>
+            <Link to='/' id="footer2">Youtube</Link>
         
           </div>
         </div>
