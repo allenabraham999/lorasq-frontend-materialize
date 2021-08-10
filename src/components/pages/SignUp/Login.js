@@ -1,5 +1,5 @@
 import React from 'react';
-import '/home/wafflemyth/lorasq-frontend-materialize/node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '/home/wafflemyth/lorasq-frontend-materialize/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
 import { Link } from "react-router-dom";
 
