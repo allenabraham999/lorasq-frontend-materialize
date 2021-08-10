@@ -1,21 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./Map.css";
 import HelpNeeded from "./Data";
 
 var myIcon = L.icon({
-  iconUrl:"https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
   iconSize: [25, 41],
   iconAnchor: [12.25, 41],
   popupAnchor: [0, -41],
 });
 
-function MarkerMaker(data) {
+
+function deleter(props,index){
+  console.log("I have been deleted!"+index);
+  console.log("Data:"+HelpNeeded[index])
+  console.log(HelpNeeded[index])
+  delete HelpNeeded[index];
+  console.log(HelpNeeded);
+}
+
+function MarkerMaker(data,index) {
+  const [saved,changeSaved] = useState("Help Needed!!");
   return (
     <Marker position={[data.lat, data.lng]} icon={myIcon}>
-      <Popup>
-        <b>Help Needed!</b> <br /> Latitude: {data.lat} <br/> Longitude:{data.lng}.
+      <Popup className="popup">
+        <div className="contents">
+          <b>{saved}</b> <br /> Latitude: {data.lat} <br /> Longitude:{data.lng}.
+          <br></br>
+          <button onClick={()=>saved==="Help Needed!!" ?changeSaved("Saved"):changeSaved("Help Needed!!")} className="the-button">Saved</button>
+          <button onClick={(props)=>deleter(props,index)} className="the-button">Remove</button>
+        </div>
       </Popup>
     </Marker>
   );
@@ -42,6 +57,7 @@ function Mapp() {
         />
         {HelpNeeded.map(MarkerMaker)}
       </MapContainer>
+      <div><h1>Settings!</h1></div>
     </div>
   );
 }

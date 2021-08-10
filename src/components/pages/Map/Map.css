@@ -1,3 +1,33 @@
-.map{
-     height: 700px; 
+/* .map-holder{
+     background-color: #1C2237;
+     padding:100px;
+} */
+.popup{
+     font-size: 10px;
+     width:200px;
+     text-align: center;
 }
+.map{
+     height: 100px; 
+     margin:0 auto;
+}
+.the-button{
+     color: white;
+     font-size: 18px;
+     background-color: #1C2237;
+     display: block;
+     margin: 0 auto;
+     margin-top: 10px;
+     width:50%;
+}
+.contents{
+     text-align: center;
+
+}
+.leaflet-popup{
+     font-size: 20px;
+}
+
+/* .the-button:last-child{
+     margin-left: 6px;
+} */
