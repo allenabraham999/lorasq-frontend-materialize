@@ -57,7 +57,12 @@ function Mapp() {
         />
         {HelpNeeded.map(MarkerMaker)}
       </MapContainer>
-      <div><h1>Settings!</h1></div>
+      <div className="settings">
+        <button className="button">
+          Settings
+        </button>
+      </div>
+
     </div>
   );
 }
