@@ -3,6 +3,7 @@ import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./Map.css";
 import HelpNeeded from "./Data";
+import Modal from "react-modal";
 
 var myIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
@@ -36,13 +37,28 @@ function MarkerMaker(data,index) {
   );
 }
 
+
+function inputChange(x,pos,setPosition,position){
+  console.log("Happening!");
+  console.log(Number(x.target.value));
+  if(pos===0){
+    let same = position[1];
+    setPosition([Number(x.target.value),same]);
+  }else{
+    let same = position[0];
+    setPosition([same,Number(x.target.value)]);
+  }
+}
+
 function Mapp() {
   const state = {
     lat: 45.0535,
     lng: -0.09,
     zoom: 13,
   };
-  const position = [state.lat, state.lng];
+  const [modalIsOpen,setIsOpen] = useState(false);
+  const [position,setPosition] = useState([state.lat, state.lng]);
+
   return (
     <div className="map-holder">
       <MapContainer
@@ -51,6 +67,8 @@ function Mapp() {
         zoom={13}
         scrollWheelZoom={false}
       >
+        {console.log("position:")}
+        {console.log(position)}
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -58,11 +76,24 @@ function Mapp() {
         {HelpNeeded.map(MarkerMaker)}
       </MapContainer>
       <div className="settings">
-        <button className="button">
+        <Modal isOpen= {modalIsOpen}>
+          <h1>Sike!!!</h1>
+          <label>Lattitude</label>
+          <input onChange={(event)=>inputChange(event,0,setPosition,position)}></input>
+          <br></br>
+          <label>Longitude</label>
+          <input onChange={(event)=>inputChange(event,1,setPosition,position)}></input>
+          <br></br>
+          <button>Submit</button>
+          <br></br>
+          <br></br>
+          <button onClick={()=>setIsOpen(false)}>Close It!</button>
+        </Modal>
+        <button onClick={()=>setIsOpen(true)} className="button">
           Settings
         </button>
       </div>
-
+      {console.log(position)}
     </div>
   );
 }

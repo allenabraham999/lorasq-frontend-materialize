@@ -1,6 +1,7 @@
 .map-holder{
      background-color: #1C2237;
      padding:100px;
+     z-index: -1;
 }
 
 .popup{
@@ -9,7 +10,6 @@
      text-align: center;
 }
 .map{
-     height: 100px; 
      margin:0 auto;
 }
 .settings{
@@ -45,6 +45,26 @@
      font-size: 20px;
 }
 
+.Overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: rebeccapurple;
+   }
+
+.leaflet-container{
+     z-index: 0;
+}
+
+.ReactModal__Content{
+     height: 500px;
+     width: 50%;
+     margin: 0 auto;
+     margin-top: 100px;
+     background-color: rgb(255, 255, 255);
+}
 /* .the-button:last-child{
      margin-left: 6px;
 } */
