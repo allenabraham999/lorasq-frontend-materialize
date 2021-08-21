@@ -1,60 +1,85 @@
-
-
-.heading-prof{
-    text-align: center;
-    font-size: 60px;
-    font-weight: 900;    
-}
-
-.span-desc{
-    font-size:20px;
-    color:grey
-}
-
-.span-value{
-    font-size:25px;
-    font-weight:500
-}
-
-.save-card{
-    width:50%;
-    padding: 30px;
-    padding-left: 90px;
-    margin:0 auto;
-    margin-bottom: 100px;
-    border-radius: 0px;
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
-    transition: background-color 500ms;
-}
-.save-card:hover{
-    background-color: #1C2237;
-    color: white;
-}
-.breaker{
-    border-top: 2px solid rgb(41, 46, 53);
+.profile-container{
     width: 30%;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    height: fit-content;
+    background-color: rgb(243, 239, 241);
+    margin: 100px auto;
+    padding:10px;
+    border-radius: 30px;
 }
 
-@media only screen and (max-width: 600px){
-    .save-card{
-        width:90%;
-        padding:25px;
-    }   
-    .heading-prof{
-        font-size: 50px;
-    }
-    .span-desc{
-        font-size:15px;
-        color:grey
-    }
-    
-    .span-value{
-        font-size:18px;
-        font-weight:500
-    }
-    
+
+.profile-container h1{
+    line-height: 4.5rem;
+    color: rgb(6, 23, 78);
+    text-align: center;
+    font-size: 50px;
+    font-weight: 720;
+}
+
+.profile-content{
+    justify-content: left;
+    background-color: rgba(221, 215, 215, 0.5);
+    border-radius: 30px;
+    box-shadow:  5px 5px 8px #888888;
+    margin: 10px 40px;
+}
+
+table{
+    margin: 0 auto;
+}
+
+tr td{
+     padding: 20px;
+}
+
+td{
+    color: black;
+    font-size: 1.5em;
+}
+.edit-user-button{
+    position: relative;
+    left: 85%;
+    border-radius: 100%;
+    padding: 1.5%;
+    border: 0px;
+    box-shadow: 5px 5px 8px #888888;
+    margin: 20px 30px;
+}
+
+.edit-container{
+    margin: 0 auto;
+    width: 50%;
+    height: fit-content;
+}
+
+.edit-container label{
+    width: 40%;
+    color: rgb(29, 29, 29);
+    font-size:1.2em;
+}
+
+.edit-container input{
+    width: 60%;
+    color: black;
+    background-color: #c5c4c4;
+    padding: 14px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+.submitter{
+    border-radius: 50px;
+    margin: 0 auto;
+    background-color: rgb(6, 23, 78);
+    color: white;
+    height: 3.6em;
+    width:5.4em
+}
+
+.button-wrapper{
+    margin: 10px auto;
+    text-align: center;
 }

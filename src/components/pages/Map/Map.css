@@ -104,7 +104,30 @@
      height: 30px;
      margin: 10px;
 }
-
+@media only screen and (max-width: 600px){
+     .ReactModal__Content{
+          width:80%;
+     }
+}
 /* .the-button:last-child{
      margin-left: 6px;
 } */
+
+.modal-con label{
+     width: 100px;
+}
+.modal-con input{
+     /* border: 20px; */
+}
+.modal-con input {
+     width: 50%;
+     background-color: #d4d4d4;
+     color: rgb(0, 0, 0);
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+   }
+   
+   

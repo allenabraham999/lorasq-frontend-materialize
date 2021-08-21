@@ -17,6 +17,7 @@ function deleter(props, index) {
   console.log("I have been deleted!" + index);
   console.log("Data:" + HelpNeeded[index])
   console.log(HelpNeeded[index])
+  // HelpNeeded = HelpNeeded.filter((help,i)=>i!==index);
   delete HelpNeeded[index];
   console.log(HelpNeeded);
 }
@@ -78,9 +79,9 @@ function Mapp() {
       <div className="settings">
         <Modal isOpen={modalIsOpen}>
           <div className="modal-con">
-          <button id="close" className="close-button" onClick={() => setIsOpen(false)}><i class="fas fa-times"></i></button>
+            <button id="close" className="close-button" onClick={() => setIsOpen(false)}><i class="fas fa-times"></i></button>
             <h1>Change center</h1>
-            <label>Lattitude</label>
+            <label >Lattitude</label>
             <input onChange={(event) => inputChange(event, 0, setPosition, position)}></input>
             <br></br>
             <label>Longitude</label>
